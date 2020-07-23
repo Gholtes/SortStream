@@ -44,11 +44,10 @@ When classifying documents, the user can select the desired confidence level. Th
 
 The below heuristic can be used:
 
-#####High confidence:
+##### High confidence:
 It is highly unlikely that the program will classify a document incorrectly. However, it is likely that only a few documents will be classified, with the remaining requiring manual sorting.
 
-#####Low confidence:
+##### Low confidence:
 It is more likely that the program will classify a document incorrectly, but very few documents will require manual sorting.
-
 Ultimately the best confidence level to use will change based on the use case, so it is worth inspecting the logs files to see what confidence levels the program is producing on your data. 
 It is also worth considering the cost of misclassification relative to the cost of manually sorting documents when choosing the confidence level. 
