@@ -14,7 +14,7 @@ For product keys, please contact Grant at gwholtes@gmail.com
 
 3) Once Python is installed and working, run Sortstream.py from your command line or anaconda terminal.
 ```
-$ python Sortstream.py
+$ python SortStream.py
 ```
 
 ### How to build a model:
