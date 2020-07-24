@@ -2,7 +2,22 @@
 #### Grant Holtes 2020
 ### A GUI document classification tool
 
-Sortstream allows non-technical users to train and distribute document classification models.
+Sortstream allows non-technical users to train and distribute AI document sorting models.
+
+### Benefits
+
+#### Your data never leaves your system
+SortStream never sends your data via the internet, with all processing happening on your computer, including model training. 
+SortStream doesn’t even require an internet connection to run, with the only internet connection required used to verify the product code.
+This allows you to retain full ownership of your sensitive data and abide by local sovereignty laws
+
+#### Simple to use and incorporate into existing automation solutions
+SortStream uses a simple directory based approach to allow non-technical users to easily adapt their workflows to use SortStream. This allows allows existing automation or RPA tools to use with SortStream without complex APIs.
+
+#### Reliable results
+Sortstream provides a confidence when it predicts a document’s type, allowing the user to filter out predictions where the model is uncertain of the results. This confidence level is statistically interpretable as the probability of the document being a certain type, based on the training data used.
+
+### Access
 
 For product keys, please contact Grant at gwholtes@gmail.com
 
@@ -13,9 +28,12 @@ For product keys, please contact Grant at gwholtes@gmail.com
 2) Download and Install python 3.7. A simply method to accomplish this is to use install [anaconda](https://docs.anaconda.com/anaconda/install/) or by installing directly from [python.org](https://www.python.org/downloads/)
 
 3) Once Python is installed and working, run Sortstream.py from your command line or anaconda terminal.
+
 ```
 $ python SortStream.py
 ```
+
+When SortStream is run for the first time any missing python packages will be installed, although most of these packages are included with anaconda. These packages are: `numpy, sklearn, nltk, requests, tkinter, PyPDF2`
 
 ### How to build a model:
 
@@ -59,3 +77,10 @@ It is more likely that the program will classify a document incorrectly, but ver
 
 Ultimately the best confidence level to use will change based on the use case, so it is worth inspecting the logs files to see what confidence levels the program is producing on your data. 
 It is also worth considering the cost of misclassification relative to the cost of manually sorting documents when choosing the confidence level. 
+
+### Product Pipeline
+
+We are excited to be working on a number of additional pieces of functionality to make SortStream even more useful. These include:
+#### Support for MS Office documents
+#### Command line interface (CLI) for easy integration into automation solutions
+#### Advanced user settings to customise and evaluate the model
