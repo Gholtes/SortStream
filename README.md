@@ -51,7 +51,7 @@ Each time **build model** is used, a new model is created. If multiple models ar
 1) Place the documents that need to be classified into **input_files_to_be_sorted** folder. This folder can either be created manually or will be automatically created the first time you press the **predict** button.
 2) Open the program, use the slider to select a confidence value (see Confidence), and click **predict**
 
-The files will be sorted from the input_files_to_be_sorted” folder into subfolders in the **predictions** folder.  Each subfolder contains the documents that belong to a specific category. 
+The files will be sorted from the **input_files_to_be_sorted** folder into subfolders in the **predictions** folder.  Each subfolder contains the documents that belong to a specific category. 
 
 If the system is not confident in a result, it will move the file to a specific subfolder named **NotClassified** in the predictions folder. These need to be sorted manually. 
 
