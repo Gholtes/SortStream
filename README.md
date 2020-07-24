@@ -1,6 +1,6 @@
 # SortStream
 #### Grant Holtes 2020
-### A GUI document classification tool
+### A GUI Document Classification Tool
 
 Sortstream allows non-technical users to train and distribute AI document sorting models.
 
@@ -35,7 +35,7 @@ $ python SortStream.py
 
 When SortStream is run for the first time any missing python packages will be installed, although most of these packages are included with anaconda. These packages are: `numpy, sklearn, nltk, requests, tkinter, PyPDF2`
 
-### How to build a model:
+### How to Build a Model:
 
 In order to sort documents, the system needs to learn how to identify the category of each document. To do this, the user needs to provide a number of examples of each type of document the system would be expected to sort. 
 
