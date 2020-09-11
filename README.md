@@ -84,3 +84,4 @@ We are excited to be working on a number of additional pieces of functionality t
 1. Support for MS Office documents
 2. Command line interface (CLI) for easy integration into automation solutions
 3. Advanced user settings to customise and evaluate the model
+4. Automatic dataset balancing
