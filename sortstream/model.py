@@ -2,7 +2,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.linear_model import LogisticRegression
 import pickle
-from preprocess import setupTextPreProcess, preprocessText
+from sortstream.preprocess import setupTextPreProcess, preprocessText
 from numpy import ndarray as ndarray
 import os
 

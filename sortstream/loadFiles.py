@@ -1,4 +1,4 @@
-from pdf2txt import pdf2txt
+from sortstream.pdf2txt import pdf2txt
 
 def loadFile(path):
 	'''

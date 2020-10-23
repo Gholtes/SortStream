@@ -7,7 +7,7 @@ Core Objects: document_classifier, document_classifier_gui
 
 import datetime
 
-from main import document_classifier, document_classifier_gui
+from sortstream.main import document_classifier, document_classifier_gui
 
 __all__ = ["document_classifier", "document_classifier_gui"]
 

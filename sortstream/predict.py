@@ -1,4 +1,4 @@
-from model import loadModel
+from sortstream.model import loadModel
 import os
 
 def FindAndLoadModel(name, appPath = ".", verbose = False):

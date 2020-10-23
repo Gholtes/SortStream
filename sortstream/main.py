@@ -1,8 +1,8 @@
-from model import createAndTrainModel, loadModel, getPredictions
-from buildDataset import buildDataset
-from loadFiles import loadFile
-from predict import FindAndLoadModel, getTargetFileDirs
-from log import saveLogs
+from sortstream.model import createAndTrainModel, loadModel, getPredictions
+from sortstream.buildDataset import buildDataset
+from sortstream.loadFiles import loadFile
+from sortstream.predict import FindAndLoadModel, getTargetFileDirs
+from sortstream.log import saveLogs
 
 import numpy as np
 import os, sys
