@@ -70,7 +70,8 @@ def GetAppPath():
 				newPath = os.path.join(newPath, appPathList[i])
 			applicationPath = newPath
 	elif __file__:
-		applicationPath = os.path.abspath(os.path.dirname(__file__))
+		# applicationPath = os.path.abspath(os.path.dirname(__file__))
+		applicationPath = os.path.abspath(os.getcwd())
 	return applicationPath
 
 def splitall(path):
