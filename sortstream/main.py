@@ -235,10 +235,10 @@ class document_classifier_gui(tk.Frame, document_classifier):
 
 	def createUI(self):
 		#Text items
-		self.AppName = tk.Label(self, text = "Document Classification System")
+		self.AppName = tk.Label(self, text = "SortStream - Document Classification")
 		self.AppName.grid(row = 1, column = 1, sticky=tk.W+tk.N, padx = 20, pady=10)
 
-		self.Licence = tk.Label(self, text = "Licence: XYZ Ltd, 2020")
+		self.Licence = tk.Label(self, text = "MIT License (2020)")
 		self.Licence.grid(row = 2, column = 1, sticky=tk.W, padx = 20)
 
 		self.statusValue = tk.StringVar() #init status

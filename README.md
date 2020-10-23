@@ -27,6 +27,8 @@ from sortstream import document_classifier_gui
 document_classifier_gui() #opens a user interface.
 ```
 
+![UniVar Summary](https://github.com/Gholtes/SortStream/blob/master/images/SortStream_screenshot.PNG)
+
 #### Usual Usage
 
 ```python
