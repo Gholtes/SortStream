@@ -146,7 +146,7 @@ class document_classifier():
 				self.update_status("Failed to remove dataset")
 		return True
 
-	def predict(self, processingBatchSize = 5, threshold = 0.7):
+	def predict(self, processingBatchSize = 5):
 		self.update_status("Predicting classes")
 		#1) find model directory and files:
 		#2) Load model and status

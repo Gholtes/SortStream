@@ -17,23 +17,40 @@ SortStream uses a simple directory based approach to allow non-technical users t
 #### 3. Reliable results
 Sortstream provides a confidence when it predicts a document’s type, allowing the user to filter out predictions where the model is uncertain of the results. This confidence level is statistically interpretable as the probability of the document being a certain type, based on the training data used.
 
-### Access
+## Usage
 
-For product keys, please contact Grant at gwholtes@gmail.com
+#### GUI Usage
 
-### Installation:
+```python
+from sortstream import document_classifier_gui
 
-1) Download `SortStream.py` from this repository
-
-2) Download and Install python 3.7. A simply method to accomplish this is to use install [anaconda](https://docs.anaconda.com/anaconda/install/) or by installing directly from [python.org](https://www.python.org/downloads/)
-
-3) Once Python is installed and working, run Sortstream.py from your command line or anaconda terminal.
-
-```
-$ python SortStream.py
+document_classifier_gui() #opens a user interface.
 ```
 
-When SortStream is run for the first time any missing python packages will be installed, although most of these packages are included with anaconda. These packages are: `numpy, sklearn, nltk, requests, tkinter, PyPDF2`
+#### Usual Usage
+
+```python
+from sortstream import document_classifier
+
+sorter = document_classifier()
+sorter.fit(data_folder = "/PATH/TO/ROOT/DATA/FOLDER")
+sorter.predict()
+
+```
+
+## Installation:
+
+Use pip to install SortStream and its dependancies.
+
+```bash
+$ pip install -e git+https://github.com/Gholtes/SortStream.git#egg=sortstream
+```
+
+### Requirements
+
+Python 3.7+. A simply method to install Python is to use install [anaconda](https://docs.anaconda.com/anaconda/install/) or by installing directly from [python.org](https://www.python.org/downloads/)
+
+Python packages: `numpy, sklearn, nltk, requests, tkinter, PyPDF2`
 
 ### How to Build a Model:
 
