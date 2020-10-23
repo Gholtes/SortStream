@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+SortStream.egg-info/PKG-INFO
+SortStream.egg-info/SOURCES.txt
+SortStream.egg-info/dependency_links.txt
+SortStream.egg-info/requires.txt
+SortStream.egg-info/top_level.txt
+sortstream/__init__.py
+sortstream/buildDataset.py
+sortstream/loadFiles.py
+sortstream/log.py
+sortstream/main.py
+sortstream/model.py
+sortstream/pdf2txt.py
+sortstream/predict.py
+sortstream/preprocess.py
