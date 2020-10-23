@@ -33,6 +33,7 @@ document_classifier_gui() #opens a user interface.
 from sortstream import document_classifier
 
 sorter = document_classifier()
+#data folder defaults to current working directory
 sorter.fit(data_folder = "/PATH/TO/ROOT/DATA/FOLDER")
 sorter.predict()
 
@@ -50,23 +51,31 @@ $ pip install -e git+https://github.com/Gholtes/SortStream.git#egg=sortstream
 
 Python 3.7+. A simply method to install Python is to use install [anaconda](https://docs.anaconda.com/anaconda/install/) or by installing directly from [python.org](https://www.python.org/downloads/)
 
-Python packages: `numpy, sklearn, nltk, requests, tkinter, PyPDF2`
+Python packages: `numpy, sklearn, nltk, requests, PyPDF2`
 
-### How to Build a Model:
+## Operation
+
+SortStream uses a directory based approch to labelling training data and outputting predictions.
+
+The training dataset is orgaised as a root folder containing folders for each class or type of document. Each of these subfolders should contain the training examples for each class.
+
+When predict is called, sortstream will gather input documents from a folder and attempt to move them into the approporate class subfolder. These class prediction subfolders are in the 'predictions' folder.
+
+### Fit - How to Build a Model:
 
 In order to sort documents, the system needs to learn how to identify the category of each document. To do this, the user needs to provide a number of examples of each type of document the system would be expected to sort. 
 
 1) Find a few examples of each category (between 10 and 100 is a good sample size)
 2) For each category, make a folder that contains all of the examples. The name of this folder will be the name of the category.
 3) Put all of these category example folders in a folder named **data** which is in the same file location as the program.
-4) Open the program and click **build model** The program will learn from the examples in the **data** folder, and build a model. This model is saved alongside the program file. Do not change the folder name of the saved model. 
+4) Open the program and click **build model** or `fit()` The program will learn from the examples in the **data** folder, and build a model. This model is saved alongside the program file. Do not change the folder name of the saved model. 
 
-Each time **build model** is used, a new model is created. If multiple models are present in the folder, the program will use the first one it finds.
+Each time **build model** or `fit()`is used, a new model is created. If multiple models are present in the folder, the program will use the first one it finds.
 
-### Classifying Documents:
+### Predict - Classifying Documents:
 
-1) Place the documents that need to be classified into **input_files_to_be_sorted** folder. This folder can either be created manually or will be automatically created the first time you press the **predict** button.
-2) Open the program, use the slider to select a confidence value (see Confidence), and click **predict**
+1) Place the documents that need to be classified into **input_files_to_be_sorted** folder. This folder can either be created manually or will be automatically created the first time you press the **predict** button or call the `predict()` method.
+2) Open the program, use the slider to select a confidence value (see Confidence), and click **predict** or call the `predict()`method.
 
 The files will be sorted from the **input_files_to_be_sorted** folder into subfolders in the **predictions** folder.  Each subfolder contains the documents that belong to a specific category. 
 
@@ -95,9 +104,9 @@ It is more likely that the program will classify a document incorrectly, but ver
 Ultimately the best confidence level to use will change based on the use case, so it is worth inspecting the logs files to see what confidence levels the program is producing on your data. 
 It is also worth considering the cost of misclassification relative to the cost of manually sorting documents when choosing the confidence level. 
 
-### Product Pipeline
+### Feature Pipeline
 
-We are excited to be working on a number of additional pieces of functionality to make SortStream even more useful. These include:
+I am excited to be working on a number of additional pieces of functionality to make SortStream even more useful. These include:
 1. Support for MS Office documents
 2. Command line interface (CLI) for easy integration into automation solutions
 3. Advanced user settings to customise and evaluate the model
