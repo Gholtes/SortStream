@@ -7,6 +7,10 @@ Core Objects: document_classifier, document_classifier_gui
 
 import datetime
 
+from main import document_classifier, document_classifier_gui
+
+__all__ = ["document_classifier", "document_classifier_gui"]
+
 __title__ = "mesa"
 __version__ = "1.0"
 __license__ = "MIT"
