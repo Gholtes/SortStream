@@ -13,13 +13,9 @@ import csv
 '''
 This file houses the workflow funcions and UI to call these functions.
 Key workflows:
-1) BuildModelFromData: Transform a dataset of files into a trained model in one step.
-2) BuildDatasetOnly: Transfrom structured files into a csv dataset, but dont train any model.
-3) TrainModelOnly: Given a transfromed dataset exists from 1) or 2), train a model on this dataset.
-4) PredictClasses: Given a 'data' folder, predict the classes of the files in 'data' and move into their own 
+1) fit: Transform a dataset of files into a trained model in one step.
+2) predict: Given a 'data' folder, predict the classes of the files in 'data' and move into their own 
 folders by class. If class folders do not exist, create these first.
-5) PredictAPI: Given a 'data' folder, predict the classes of the files in 'data' and move into their own 
-folders by class. If class folders do not exist, create these first. This should be callable without activating the GUI.
 
 File Structure:
 PROGRAMFILE
@@ -96,7 +92,7 @@ class document_classifier():
 		self.name = "SortStream"
 		self.v = verbose
 
-	def BuildModelFromData(self, data_folder = None, preprocess = True):
+	def fit(self, data_folder = None, preprocess = True):
 		timestamp = YYYYMMDDHMS() #get unique timestamp
 		
 		#Build dataset
@@ -150,7 +146,7 @@ class document_classifier():
 				self.update_status("Failed to remove dataset")
 		return True
 
-	def PredictClasses(self, processingBatchSize = 5, threshold = 0.7):
+	def predict(self, processingBatchSize = 5, threshold = 0.7):
 		self.update_status("Predicting classes")
 		#1) find model directory and files:
 		#2) Load model and status
@@ -252,7 +248,7 @@ class document_classifier_gui(tk.Frame, document_classifier):
 		#4) PREDICT
 		self.PREDICT_Button = tk.Button(self, 
 													text = "Predict Classes",
-													command = self.PredictClasses,
+													command = self.predict,
 													width=26)
 		self.PREDICT_Button.grid(row=5, column=1, sticky=tk.W, padx = 20)
 		#4.2 Predict Confidence 
@@ -265,7 +261,7 @@ class document_classifier_gui(tk.Frame, document_classifier):
 		#1) BuildModelFromData
 		self.BuildModelFromData_Button = tk.Button(self, 
 													text = "Build Model from Data",
-													command = self.BuildModelFromData,
+													command = self.fit,
 													width=26)
 		self.BuildModelFromData_Button.grid(row=6, column=1, sticky=tk.W, padx = 20)
 		#Quit
