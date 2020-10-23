@@ -1,7 +1,7 @@
 import csv
 import os
 from sortstream.preprocess import setupTextPreProcess, preprocessText
-from pdf2txt import pdf2txt
+from sortstream.pdf2txt import pdf2txt
 import random
 
 
