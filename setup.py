@@ -6,7 +6,7 @@ setup(
 	author = "Grant Holtes",
 	author_email = "gwholes@gmail.com",
 	url = "https://github.com/Gholtes/SortStream",
-	keywords = ["nlp", "classification", "document", "pdf"]
+	keywords = ["nlp", "classification", "document", "pdf"],
     packages=['sortstream'],
 	install_requires=[
 		"nltk",
