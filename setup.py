@@ -10,8 +10,7 @@ setup(
 		"nltk",
 		"numpy",
 		"PyPDF2",
-		"sklearn",
-		"tkinter"
+		"sklearn"
 	],
     license='LICENSE.txt',
 	description='NLP Document Classification Tool.',
