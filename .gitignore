@@ -1,2 +1,5 @@
 env/
 .DS_store
+dist/
+SortStream.egg-info/
+MANIFEST
