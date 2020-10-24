@@ -1,4 +1,0 @@
-nltk
-numpy
-PyPDF2
-sklearn
