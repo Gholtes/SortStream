@@ -46,7 +46,9 @@ sorter.predict()
 Use pip to install SortStream and its dependancies.
 
 ```bash
-$ pip install -e git+https://github.com/Gholtes/SortStream.git#egg=sortstream
+pip install sortstream
+
+pip install -e git+https://github.com/Gholtes/SortStream.git#egg=sortstream
 ```
 
 ### Requirements
@@ -72,7 +74,7 @@ In order to sort documents, the system needs to learn how to identify the catego
 3) Put all of these category example folders in a folder named **data** which is in the same file location as the program.
 4) Open the program and click **build model** or `fit()` The program will learn from the examples in the **data** folder, and build a model. This model is saved alongside the program file. Do not change the folder name of the saved model. 
 
-Each time **build model** or `fit()`is used, a new model is created. If multiple models are present in the folder, the program will use the first one it finds.
+Each time **build model** or `fit()` is used, a new model is created. If multiple models are present in the folder, the program will use the first one it finds.
 
 ### Predict - Classifying Documents:
 

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: SortStream
-Version: 1.2.1
+Version: 1.2.2
 Summary: NLP Document Classification Tool.
 Home-page: https://github.com/Gholtes/SortStream
 Author: Grant Holtes
@@ -26,6 +26,44 @@ Description: # SortStream
         #### 3. Reliable results
         Sortstream provides a confidence when it predicts a document’s type, allowing the user to filter out predictions where the model is uncertain of the results. This confidence level is statistically interpretable as the probability of the document being a certain type, based on the training data used.
         
+        ## Usage
+        
+        #### GUI Usage
+        
+        ```python
+        from sortstream import document_classifier_gui
+        
+        document_classifier_gui() #opens a user interface.
+        ```
+        
+        ![UniVar Summary](https://github.com/Gholtes/SortStream/blob/master/images/SortStream_screenshot.png)
+        
+        #### Usual Usage
+        
+        ```python
+        from sortstream import document_classifier
+        
+        sorter = document_classifier()
+        #data folder defaults to current working directory
+        sorter.fit(data_folder = "/PATH/TO/ROOT/DATA/FOLDER")
+        sorter.predict()
+        
+        ```
+        
+        ## Installation:
+        
+        Use pip to install SortStream and its dependancies.
+        
+        ```bash
+        $ pip install -e git+https://github.com/Gholtes/SortStream.git#egg=sortstream
+        ```
+        
+        ### Requirements
+        
+        Python 3.7+. A simply method to install Python is to use install [anaconda](https://docs.anaconda.com/anaconda/install/) or by installing directly from [python.org](https://www.python.org/downloads/)
+        
+        Python packages: `numpy, sklearn, nltk, requests, PyPDF2`
+        
         ## Operation
         
         SortStream uses a directory based approch to labelling training data and outputting predictions.
@@ -48,7 +86,7 @@ Description: # SortStream
         ### Predict - Classifying Documents:
         
         1) Place the documents that need to be classified into **input_files_to_be_sorted** folder. This folder can either be created manually or will be automatically created the first time you press the **predict** button or call the `predict()` method.
-        2) Open the program, use the slider to select a confidence value (see Confidence), and click **predict** or call the `predict()` method.
+        2) Open the program, use the slider to select a confidence value (see Confidence), and click **predict** or call the `predict()`method.
         
         The files will be sorted from the **input_files_to_be_sorted** folder into subfolders in the **predictions** folder.  Each subfolder contains the documents that belong to a specific category. 
         
@@ -84,6 +122,7 @@ Description: # SortStream
         2. Command line interface (CLI) for easy integration into automation solutions
         3. Advanced user settings to customise and evaluate the model
         4. Automatic dataset balancing
+        
 Keywords: nlp,classification,document,pdf
 Platform: UNKNOWN
 Description-Content-Type: text/markdown

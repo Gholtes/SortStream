@@ -10,3 +10,4 @@ sortstream/model.py
 sortstream/pdf2txt.py
 sortstream/predict.py
 sortstream/preprocess.py
+pypiReadme.md

@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
 	name='SortStream',
-	version='1.2.1',
+	version='1.2.2',
 	author = "Grant Holtes",
 	author_email = "gwholes@gmail.com",
 	url = "https://github.com/Gholtes/SortStream",
@@ -18,5 +18,5 @@ setup(
 	license="MIT",
 	description='NLP Document Classification Tool.',
 	long_description_content_type='text/markdown',
-	long_description=open('pypiReadme.md', 'r').read()
+	long_description=open('README.md', 'r').read()
 )
